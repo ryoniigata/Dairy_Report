@@ -1,15 +1,12 @@
 package controller;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.time.LocalDate;
 
 public class testString {
 
 	public static void main(String[] args) {
 
+		/*
 		String url = "jdbc:mysql://localhost/dairy_report_db?serverTimezone=JST";
 		String name = "root";
 		String pw = "root";
@@ -37,5 +34,11 @@ public class testString {
 
 
 	}
+	*/
 
+//		SimpleDateFormat sdt = new SimpleDateFormat("yyyy-MM-dd");
+		LocalDate ldt = LocalDate.now();
+		System.out.println(ldt);
+
+	}
 }

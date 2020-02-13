@@ -1,6 +1,7 @@
 package controller;
 
 import java.io.IOException;
+import java.time.LocalDateTime;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -56,9 +57,11 @@ public class LoginController extends HttpServlet {
 			MemberInfoBeans mib = new MemberInfoBeans();
 			mib.setId(id);
 			mib.setPw(pw);
+			
+			LocalDateTime ldt = LocalDateTime.now();
 
 			//トップページへ画面遷移
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/topView.jsp");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/top.jsp");
 			dispatcher.forward(request, response);
 
 		} else {

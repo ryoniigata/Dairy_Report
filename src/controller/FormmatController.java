@@ -34,7 +34,7 @@ public class FormmatController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/formmatView.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/formmat.jsp");
 		dispatcher.forward(request, response);
 	}
 
@@ -62,7 +62,7 @@ public class FormmatController extends HttpServlet {
 
 		request.setAttribute("formmat", array);
 		//フォーマット確認へ画面遷移
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/formmatConfirmationView.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/formmatConfirmation.jsp");
 		dispatcher.forward(request, response);
 
 	}
